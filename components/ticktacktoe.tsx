@@ -82,7 +82,7 @@ const TicTacToe: React.FC = () => {
                   viewBox="-4.8 -4.8 25.60 25.60"
                   xmlns="http://www.w3.org/2000/svg"
                   stroke="#000000"
-                  strokeWidth="0.8"
+                  strokeWidth="3"
                 >
                   <path d="M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z" fillRule="evenodd"></path>
                 </svg>
@@ -92,7 +92,7 @@ const TicTacToe: React.FC = () => {
                   <path
                     d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
                     stroke="#000000"
-                    strokeWidth="2.4"
+                    strokeWidth="5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   ></path>
