@@ -29,7 +29,7 @@
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: .06em;
+    gap: .05em;
     border: 1px solid black;
   }
   
@@ -43,7 +43,7 @@
     cursor: pointer;
     font-weight: bold;
     background-color: #fff;
-    border: 18px solid #000;
+    border: 14px solid #000;
   }
   
   .square:hover {
