@@ -1,54 +1,54 @@
-body{
-  margin:0;
-  font-family: 'Open Sans', sans-serif;
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100vh; /*Ensure the grid takes up at least the full viewport height */
 }
 
-.content{
+.content {
   grid-row: 1/2;
 }
 
-.header{
+.header {
   grid-row: 2/3;
   background: #333;
-  color:#fff;
+  color: #fff;
   text-align: center;
   padding: 5px;
 }
 
-.footer{
-   grid-row: 2/3;
-   background: #333;
-   color:#fff;
-   text-align: center;
-   padding: 20px;
+.footer {
+  grid-row: 2/3;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-evenly;
   background: #333;
   color: #fff;
 }
 
-nav a{
-  color:#fff;
+nav a {
+  color: #fff;
   text-decoration: none;
   padding: 10px;
 }
 
-.main-section{
+.main-section {
   padding: 10px;
 }
 
-
 /* Full-width inputs */
-input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 90%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -60,7 +60,7 @@ input[type=text], input[type=password] {
 /* game styles */
 
 .win-button {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -92,7 +92,7 @@ input[type=text], input[type=password] {
 
 .board-row:after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -173,4 +173,16 @@ input[type=text], input[type=password] {
   grid-template-columns: auto;
   gap: 2rem;
   margin-top: 4rem;
+}
+button {
+  font-family: inherit;
+}
+.ticktactoe,
+.services {
+  font-size: 36px;
+  padding-block: 0.7em;
+  background-color: #333333;
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }

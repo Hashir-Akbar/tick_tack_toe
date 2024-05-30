@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState, useEffect } from 'react';
@@ -14,6 +13,7 @@ const TicTacToe: React.FC = () => {
   const [xTokens, setXTokens] = useState(0);
   const [oTokens, setOTokens] = useState(0);
   const [gameFinished, setGameFinished] = useState(false);
+  const [tokenClaimed, setTokenClaimed] = useState(false);
 
   const current = history[stepNumber];
   const winner = calculateWinner(current.board);
@@ -26,12 +26,8 @@ const TicTacToe: React.FC = () => {
 
   useEffect(() => {
     if (winner && !gameFinished) {
-      if (winner === 'X') {
-        setXTokens((prev) => prev + 1);
-      } else {
-        setOTokens((prev) => prev + 1);
-      }
       setGameFinished(true);
+      setTokenClaimed(false);
     }
   }, [winner, gameFinished]);
 
@@ -54,15 +50,23 @@ const TicTacToe: React.FC = () => {
     setHistory([{ board: Array(9).fill(null), isXNext: true }]);
     setStepNumber(0);
     setGameFinished(false); // Reset game finished state for new game
+    setTokenClaimed(false); // Reset token claimed state for new game
+  };
+
+  const claimToken = () => {
+    if (winner && !tokenClaimed) {
+      if (winner === 'X') {
+        setXTokens(xTokens + 1);
+      } else if (winner === 'O') {
+        setOTokens(oTokens + 1);
+      }
+      setTokenClaimed(true);
+    }
   };
 
   return (
-
-    <>
-    <div className={styles.header_game}>
     <div className={styles.game}>
-      
-    
+        <div>
       <div className={styles.status}>{status}</div>
       <div className={styles.tokens}>
         <div>X Tokens: {xTokens}</div>
@@ -75,13 +79,18 @@ const TicTacToe: React.FC = () => {
           </button>
         ))}
       </div>
+      <div className={styles.buttons}>
+      {winner && !tokenClaimed && (
+        <button className={styles.claimToken} onClick={claimToken}>
+          Win Token for {winner}
+        </button>
+      )}
       <button className={styles.reset} onClick={resetGame}>
         Reset
       </button>
-    
-  
-    </div>
-    <div className={styles.history}>
+      </div>
+      </div>
+      <div className={styles.history}>
         <ul>
           {history.map((step, move) => (
             <li key={move}>
@@ -92,8 +101,7 @@ const TicTacToe: React.FC = () => {
           ))}
         </ul>
       </div>
-    </div>  
-    </>
+    </div>
   );
 };
 

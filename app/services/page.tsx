@@ -69,6 +69,7 @@ const Services = () => {
   return (
     <div className="grid-container">
       <div className="content">
+      <div className="services">Services</div>
         <Navbar />
         <main className="main-section">
           <h1>This is the Services page</h1>
