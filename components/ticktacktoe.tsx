@@ -78,7 +78,7 @@ const TicTacToe: React.FC = () => {
                 <svg
                   fill="#000000"
                   width="256px"
-                  height="256px"
+                  height="80px"
                   viewBox="-4.8 -4.8 25.60 25.60"
                   xmlns="http://www.w3.org/2000/svg"
                   stroke="#000000"
@@ -88,7 +88,7 @@ const TicTacToe: React.FC = () => {
                 </svg>
               )}
               {value === 'O' && (
-                <svg width="256px" height="256px" viewBox="-2.64 -2.64 29.28 29.28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="256px" height="80px" viewBox="-2.64 -2.64 29.28 29.28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
                     stroke="#000000"
