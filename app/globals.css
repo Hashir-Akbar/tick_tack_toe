@@ -1,0 +1,176 @@
+body{
+  margin:0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh; /*Ensure the grid takes up at least the full viewport height */
+}
+
+.content{
+  grid-row: 1/2;
+}
+
+.header{
+  grid-row: 2/3;
+  background: #333;
+  color:#fff;
+  text-align: center;
+  padding: 5px;
+}
+
+.footer{
+   grid-row: 2/3;
+   background: #333;
+   color:#fff;
+   text-align: center;
+   padding: 20px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  background: #333;
+  color: #fff;
+}
+
+nav a{
+  color:#fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.main-section{
+  padding: 10px;
+}
+
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* game styles */
+
+.win-button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width: 60%;
+}
+.win-button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 5px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 150px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 150px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+/* accordion styles */
+
+.accordion {
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #b2b0b0;
+}
+
+.accordion-title:hover {
+  background-color: #3ab4cc;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+  padding-right: 400px;
+}
+
+.accordion-content {
+  background-color: #ffffff;
+}
+
+/* login card styles */
+.login-card {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  grid-column-start: 3;
+  grid-column-end: 8;
+}
+
+.login-card h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-card button {
+  border: none;
+  outline: none;
+  padding: 12px;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 1rem;
+}
+.login-card button:hover {
+  opacity: 0.7;
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 2rem;
+  margin-top: 4rem;
+}
